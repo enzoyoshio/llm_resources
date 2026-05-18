@@ -75,3 +75,65 @@
 | 3. Prompt Compression | Low–Med (any LLM via API or local) | ✅ High (implement token pruning) | ✅ Very high (implementing deterministic algorithms) | ✅ High (comparative evaluation) |
 | 4. Model Merging | Low (only inference of small models) | Medium (more experimentation than coding) | Medium (linear algebra) | Medium–High (requires careful experimental design) |
 | 5. Synthetic Data & Distillation | Low (student training on Colab) | Medium (data generation pipeline + training) | Low–Medium (focus on experiment design) | ✅ High (hot research topic, easy to frame as a case study) |
+
+## Observation about research
+
+### Theme 1: PEFT for some domain
+
+- Read this [blog](https://github.com/s3pi/Effecient_Fine_Tuning) (first 2 links)
+- Read this [blog](https://medium.com/@mohamedseyam/a-gentle-guide-to-lora-fine-tuning-billion-parameter-models-without-copying-them-70aa762a9f81) and did the hands-on
+- It's very clear that LoRA and related fine-tunings has improvements, almost no memory is required, and neither training.
+- Should I choose some specific topic to work on it? Maybe do something here first because it is very conceptual? But it would fall more on developing than researching... I think
+
+### Theme 2: SLM for on edge scenarios
+
+- I should look for this now... maybe?
+
+### Theme 3: Prompt Compression
+
+- Read [this](https://docs.langchain.com/oss/python/langchain/overview?trk=article-ssr-frontend-pulse_little-text-block) and [this](https://www.freecodecamp.org/news/how-to-compress-your-prompts-and-reduce-llm-costs/).
+- It seems well stabilished (first link is a framework that can already be used). What is the research to be done here?
+
+- Some articles to read if I have time
+    - [1](https://papers.cool/venue/2025.naacl-long.368@ACL)
+        - 2 types of compression, hard and soft
+            - hard: reduces the tokens (readable)
+                - LLMLingua fets here.
+            - soft: uses vectors (non-readable)
+    - [2]()
+
+- Result: Maybe I need to find more resources or what to search for in this field.
+
+### Theme 4: Model Soup
+
+- Read [this](https://jina.ai/news/model-soups-recipe-for-embeddings/#experiment-2-averaging-models-trained-for-different-tasks) blog. It seems things works, but it is very specific. Only works on related tasks.
+- Works when training the same models, then taking the average to improve the resulting model. Sometimes it is better than the best trained model. About this, maybe the most interesting thing is that it avoids overfitting.
+- For merging models trained for different tasks, it only works with related tasks (as said in first bullet).
+    - On blog, they tested Question Answering, Doc Retrieval and Semantic Similarity.
+    - The best result were merging QA with DR, because they are alike, while when the 3 were merged it didn't outperform single trained ones (although that on avg it performed better on the 3 tasks)
+    - Probably based on this [article](https://arxiv.org/pdf/2511.21437)
+- Result: great but I'm not interested... I think.
+
+### Theme 5: Knowledge Destillation
+
+- I gave a quick look on [this](https://docs.nvidia.com/nemo/automodel/latest/guides/llm/knowledge-distillation.html), but is just a doc of NVidia lib to do Knowledge Destillation.
+- It seems interesting, I think this is the one tha it seems more interesting and maybe more researchable (?)
+- I need to look for more resources
+
+## Observation about Developing
+
+As a kind of side project, I would want to develop something, as this lab is AI related, so develop something with AI.
+
+### Option 1: Application for language learning (pt &rarr; jap)
+
+- My own experience, I'm suffering to gather and organize all stuff required to learn japanese. It would be good if there were an application that could do it &smile;
+
+### Option 2: Create an assistant for a specific task
+
+- Trade market analyzer
+- Daily life organizer
+- Somethign related to sports
+
+### Option 3: Run out of ideas
+
+- Maybe ask copilot for more ideas
